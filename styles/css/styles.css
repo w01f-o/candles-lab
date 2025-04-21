@@ -4445,16 +4445,26 @@ img {
   font-size: 22px;
   font-weight: 600;
 }
+@media (max-width: 768px) {
+  .candles__search-button {
+    display: none;
+  }
+}
 .candles__filters {
   padding-block: 32px 100px;
 }
 .candles__filters-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 .candles__filters-item {
   flex-grow: 1;
   font-size: 24px;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, color 0.2s;
+}
+.candles__filters-item_active {
+  color: var(--color-blush);
 }
 @media (hover: hover) {
   .candles__filters-item:hover {

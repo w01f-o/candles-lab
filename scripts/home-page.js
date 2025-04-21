@@ -37,10 +37,12 @@ const initHomePage = () => {
 			const matchesType = !activeFilter || itemType === activeFilter;
 			const matchesSearch = !query || itemName.includes(query);
 
+			const colSelector = '.col-xxl-3.col-xl-4.col-md-6.col-12';
+
 			if (matchesType && matchesSearch) {
-				item.closest(".col-3").style.display = "block";
+				item.closest(colSelector).style.display = "block";
 			} else {
-				item.closest(".col-3").style.display = "none";
+				item.closest(colSelector).style.display = "none";
 			}
 		});
 	}

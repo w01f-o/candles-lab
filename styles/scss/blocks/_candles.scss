@@ -32,6 +32,10 @@
         size: 22px;
         weight: 600;
       }
+
+      @include max-md-screen {
+        display: none;
+      }
     }
   }
 
@@ -40,6 +44,8 @@
 
     &-list {
       display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
     }
 
     &-item {
@@ -48,7 +54,11 @@
         size: 24px;
       }
 
-      transition: opacity 0.2s;
+      &_active {
+        color: var(--color-blush);
+      }
+
+      transition: opacity 0.2s, color 0.2s;
 
       @include hover-screen {
         &:hover {

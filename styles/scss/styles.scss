@@ -1,0 +1,16 @@
+@use './base/reset' as *;
+@use './base/bootstrap-grid' as *;
+@use './base/global' as *;
+@use './base/utils' as *;
+@use './blocks/header' as *;
+@use './blocks/hamburger' as *;
+@use './blocks/nav' as *;
+@use './blocks/button' as *;
+@use './blocks/footer' as *;
+@use './blocks/candles' as *;
+@use './blocks/about' as *;
+@use './blocks/auth' as *;
+@use './blocks/basket' as *;
+@use './blocks/profile' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');

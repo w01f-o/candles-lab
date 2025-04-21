@@ -1,0 +1,27 @@
+@use '../base/utils' as *;
+
+.primary-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 180px;
+  padding: 12px 24px;
+  transition: opacity 0.3s;
+
+  border-radius: 8px;
+  border: 2px solid #dbb373;
+
+  font: {
+    weight: 700;
+    size: inherit;
+  }
+  background: var(--color-primary_dark);
+  color: var(--color-foreground);
+
+  @include hover-screen {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

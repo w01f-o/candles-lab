@@ -1,0 +1,99 @@
+@use '../base/utils' as *;
+
+.footer {
+  background: var(--color-primary);
+
+  &__row {
+    padding-block: 60px;
+
+    @include max-sm-screen {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__logo {
+    @include max-lg-screen {
+      display: none;
+    }
+
+    height: 220px;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+    @include max-md-screen {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+  }
+
+  &__social {
+    padding-block: 30px;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__nav {
+    &-title {
+      margin-block-end: 28px;
+      font: {
+        size: 28px;
+        weight: 600;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &-link {
+      font: {
+        size: 18px;
+        weight: 500;
+      }
+    }
+  }
+
+  &__contacts {
+    @include max-sm-screen {
+      margin-block-end: 16px;
+    }
+
+    &-title {
+      @extend .footer__nav-title;
+    }
+
+    &-link {
+      display: block;
+      margin-block-end: 4px;
+      font: {
+        size: 36px;
+        weight: 600;
+      }
+
+      @include max-lg-screen {
+        font: {
+          size: 32px;
+        }
+      }
+    }
+
+    &-time {
+      margin-block-end: 24px;
+    }
+  }
+}

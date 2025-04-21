@@ -1,0 +1,64 @@
+@use '../base/utils' as *;
+
+.header {
+  background: var(--color-primary);
+
+  &__row {
+    padding-block: 25px 30px;
+    align-items: center;
+
+    @include max-md-screen {
+      padding-block: 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+
+    height: 120px;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    height: 130px;
+
+    @include max-lg-screen {
+      height: 100px;
+    }
+
+    @include max-md-screen {
+      display: none;
+    }
+
+    text-align: center;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__nav {
+    @include max-md-screen {
+      display: none;
+    }
+
+    &-list {
+      display: flex;
+      justify-content: flex-end;
+      gap: 60px;
+    }
+
+    &-item {
+      height: 60px;
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

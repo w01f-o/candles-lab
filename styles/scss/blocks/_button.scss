@@ -25,3 +25,9 @@
     }
   }
 }
+
+.secondary-button {
+  @extend .primary-button;
+  border: none;
+  background: #ead4c5;
+}

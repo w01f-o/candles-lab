@@ -4139,6 +4139,7 @@ img {
 :root {
   --color-background: #ffffff;
   --color-foreground: #000000;
+  --color-content: #f8f0eb;
   --color-primary: #eddec5;
   --color-primary_dark: #ddc397;
   --color-gray: #d9d9d9;
@@ -4690,4 +4691,66 @@ img {
 .oauth__separator {
   padding-block: 16px;
   font-size: 24px;
+}
+
+.profile__title {
+  padding-block-start: 40px;
+  padding-block-end: 16px;
+  font-size: 64px;
+}
+.profile__row {
+  align-items: center;
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--color-content);
+}
+.profile__data-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .profile__data-list {
+    margin-block-end: 24px;
+  }
+}
+.profile__data-item {
+  padding-block: 16px;
+  padding-inline: 20px;
+  border-radius: 12px;
+  background: var(--color-gray);
+}
+.profile__links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+.profile__links-item {
+  display: flex;
+  width: 60px;
+  height: 60px;
+}
+@media (max-width: 768px) {
+  .profile__links-item {
+    width: 40px;
+    height: 40px;
+  }
+}
+.profile__links-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile__picture-text {
+  padding-block-start: 32px;
+  padding-block-end: 12px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+.profile__picture-img {
+  display: flex;
+  justify-content: center;
+  margin-block-end: 80px;
 }/*# sourceMappingURL=styles.css.map */

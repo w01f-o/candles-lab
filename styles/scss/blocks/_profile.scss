@@ -1,2 +1,79 @@
+@use '../base/utils' as *;
+
 .profile {
+  &__title {
+    padding-block-start: 40px;
+    padding-block-end: 16px;
+    font: {
+      size: 64px;
+    }
+  }
+
+  &__row {
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--color-content);
+  }
+
+  &__data {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      @include max-md-screen {
+        margin-block-end: 24px;
+      }
+    }
+
+    &-item {
+      padding-block: 16px;
+      padding-inline: 20px;
+      border-radius: 12px;
+      background: var(--color-gray);
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+
+    &-item {
+      display: flex;
+
+      width: 60px;
+      height: 60px;
+
+      @include max-md-screen {
+        width: 40px;
+        height: 40px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__picture {
+    &-text {
+      padding-block-start: 32px;
+      padding-block-end: 12px;
+      text-align: center;
+      font: {
+        size: 24px;
+        weight: 600;
+      }
+    }
+
+    &-img {
+      display: flex;
+      justify-content: center;
+      margin-block-end: 80px;
+    }
+  }
 }

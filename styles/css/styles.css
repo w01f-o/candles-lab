@@ -4498,4 +4498,41 @@ img {
 .candles__item-name {
   font-size: 20px;
   font-weight: 600;
+}
+
+.about {
+  text-align: center;
+}
+.about__row {
+  padding-block: 70px;
+}
+.about__card:not(:last-child) {
+  margin-block-end: 80px;
+}
+.about__card-text {
+  font-size: 32px;
+  font-weight: 600;
+}
+.about__title {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 100px;
+}
+.about__title span {
+  font-weight: 600;
+}
+.about__title span:nth-child(1) {
+  font-size: 96px;
+}
+@media (max-width: 768px) {
+  .about__title span:nth-child(1) {
+    font-size: 64px;
+  }
+}
+.about__title span:nth-child(2) {
+  font-size: 32px;
+}
+.about__subtitle {
+  font-size: 56px;
+  font-weight: 600;
 }/*# sourceMappingURL=styles.css.map */

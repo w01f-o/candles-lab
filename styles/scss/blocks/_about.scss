@@ -1,2 +1,61 @@
+@use '../base/utils' as *;
+
 .about {
+  text-align: center;
+
+  &__row {
+    padding-block: 70px;
+  }
+
+  &__card {
+    &:not(:last-child) {
+      margin-block-end: 80px;
+    }
+
+    &-img {
+    }
+
+    &-text {
+      font: {
+        size: 32px;
+        weight: 600;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin-block-end: 100px;
+
+    span {
+      font: {
+        weight: 600;
+      }
+
+      &:nth-child(1) {
+        font: {
+          size: 96px;
+        }
+
+        @include max-md-screen {
+          font: {
+            size: 64px;
+          }
+        }
+      }
+      &:nth-child(2) {
+        font: {
+          size: 32px;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    font: {
+      size: 56px;
+      weight: 600;
+    }
+  }
 }

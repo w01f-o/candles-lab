@@ -1,2 +1,96 @@
+@use '../base/utils' as *;
+
 .candles {
+  &__row {
+    padding-block: 32px;
+    justify-content: center;
+  }
+
+  &__search {
+    display: flex;
+    border-radius: 28px;
+    padding: 8px;
+    gap: 20px;
+    background: var(--color-primary_dark);
+
+    &-input {
+      padding-inline: 12px;
+      padding-block: 8px;
+      flex-grow: 1;
+
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      background: var(--color-beige);
+    }
+
+    &-button {
+      border-radius: 20px;
+      background: var(--color-blush);
+      min-width: 150px;
+      font: {
+        size: 22px;
+        weight: 600;
+      }
+    }
+  }
+
+  &__filters {
+    padding-block: 32px 100px;
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      flex-grow: 1;
+      font: {
+        size: 24px;
+      }
+
+      transition: opacity 0.2s;
+
+      @include hover-screen {
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    height: 590px;
+    margin-block-end: 100px;
+
+    &-img {
+      flex-grow: 1;
+      background: #edecec;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-row {
+      justify-content: space-between;
+    }
+
+    &-info {
+      padding-block: 9px;
+      padding-inline: 18px;
+      background: var(--color-gray);
+    }
+
+    &-name {
+      font: {
+        size: 20px;
+        weight: 600;
+      }
+    }
+  }
 }

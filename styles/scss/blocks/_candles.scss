@@ -101,6 +101,19 @@
         size: 20px;
         weight: 600;
       }
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &-buy {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      button {
+        min-width: auto;
+      }
     }
   }
 }

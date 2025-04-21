@@ -4185,12 +4185,12 @@ img {
 }
 @media (max-width: 768px) {
   .header__row {
-    padding-block: 0;
+    padding-block: 15px 15px;
   }
 }
 .header__logo {
   display: flex;
-  height: 120px;
+  height: 70px;
 }
 .header__logo img {
   height: 100%;
@@ -4198,13 +4198,8 @@ img {
      object-fit: contain;
 }
 .header__title {
-  height: 130px;
+  height: 70px;
   text-align: center;
-}
-@media (max-width: 992px) {
-  .header__title {
-    height: 100px;
-  }
 }
 @media (max-width: 768px) {
   .header__title {
@@ -4224,13 +4219,15 @@ img {
 .header__nav-list {
   display: flex;
   justify-content: flex-end;
-  gap: 60px;
+  gap: 30px;
 }
 .header__nav-item {
-  height: 60px;
+  height: 40px;
+  width: 40px;
 }
 .header__nav-item img {
   height: 100%;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -4513,6 +4510,17 @@ img {
 .candles__item-name {
   font-size: 20px;
   font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.candles__item-buy {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.candles__item-buy button {
+  min-width: auto;
 }
 
 .about {

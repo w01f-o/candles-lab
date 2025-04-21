@@ -1,2 +1,112 @@
+@use '../base/utils' as *;
+
 .basket {
+  &__title {
+    padding-block-start: 40px;
+    padding-block-end: 16px;
+    font: {
+      size: 64px;
+    }
+  }
+
+  &__row {
+    border-radius: 16px;
+    margin-block-end: 50px;
+    background: var(--color-content);
+  }
+
+  &__table {
+    padding: 32px;
+
+    &-row {
+      background: var(--color-gray);
+      border-radius: 16px;
+      margin-block-end: 24px;
+      padding: 16px;
+    }
+
+    &-cell {
+      display: flex;
+      align-items: center;
+      font: {
+        size: 18px;
+        weight: 500;
+      }
+
+      @include max-sm-screen {
+        font: {
+          size: 16px;
+        }
+      }
+    }
+
+    &-total {
+      &-row {
+        justify-content: flex-end;
+      }
+
+      &-cell {
+        padding: 16px;
+        font: {
+          size: 20px;
+          weight: 600;
+        }
+
+        @include max-sm-screen {
+          font: {
+            size: 18px;
+          }
+        }
+        background: var(--color-gray);
+
+        &:nth-child(1) {
+          border-radius: 16px 0 0 16px;
+        }
+
+        &:nth-child(2) {
+          border-radius: 0 16px 16px 0;
+        }
+      }
+    }
+  }
+
+  &__delivery {
+    margin-block-end: 48px;
+
+    &-title {
+      text-align: center;
+      margin-block-end: 12px;
+
+      font: {
+        size: 48px;
+      }
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      button {
+        align-self: center;
+        padding-inline: 48px;
+        font: {
+          size: 36px;
+        }
+      }
+    }
+
+    &-label {
+      padding: 16px;
+      border-radius: 12px;
+      width: 100%;
+      background: var(--color-content);
+
+      input {
+        border-radius: 8px;
+        padding-block: 12px;
+        width: 100%;
+      }
+    }
+  }
 }

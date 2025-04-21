@@ -4169,6 +4169,10 @@ img {
   pointer-events: unset;
 }
 
+.main {
+  flex-grow: 1;
+}
+
 .header {
   background: var(--color-primary);
 }

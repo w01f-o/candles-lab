@@ -9,6 +9,10 @@ const initAuthPage = () => {
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
+		const user = Object.fromEntries(new FormData(e.currentTarget));
+
+		localStorage.setItem('user', JSON.stringify(user));
+		location.href = './profile.html';
 	});
 };
 
